@@ -143,21 +143,23 @@ jobs:
         passphrase: ${{ secrets.SSH_PASSPHRASE }}
         source: "docker-compose.production.yml"
         target: "taski"
-    - name: Executing remote ssh commands to deploy
+    - name: Deploy to server via ssh
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USER }}
-        key: ${{ secrets.SSH_KEY }}
-        passphrase: ${{ secrets.SSH_PASSPHRASE }}
-        script: |
-          cd taski
-          sudo docker compose -f docker-compose.production.yml pull
-          sudo docker compose -f docker-compose.production.yml down
-          sudo docker compose -f docker-compose.production.yml up -d
-          sudo docker compose -f docker-compose.production.yml exec backend python manage.py migrate
-          sudo docker compose -f docker-compose.production.yml exec backend python manage.py collectstatic
-          sudo docker compose -f docker-compose.production.yml exec backend cp -r /app/collected_static/. /backend_static/static/ 
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.SSH_KEY }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          script: |
+              cd kittygram
+              sudo docker compose -f docker-compose.production.yml pull
+              sudo docker compose -f docker-compose.production.yml down
+              sudo docker compose -f docker-compose.production.yml up -d
+              sudo docker compose -f docker-compose.production.yml exec backend python manage.py migrate
+              # Устанавливаем временный STATIC_ROOT перед collectstatic
+              sudo docker compose -f docker-compose.production.yml exec backend bash -c "export DJANGO_STATIC_ROOT=/tmp/backend_static && python manage.py collectstatic --no-input"
+              # Копируем файлы в нужное место
+              sudo docker compose -f docker-compose.production.yml exec backend cp -r /tmp/backend_static/. /static/
 
   send_message:
     runs-on: ubuntu-latest
