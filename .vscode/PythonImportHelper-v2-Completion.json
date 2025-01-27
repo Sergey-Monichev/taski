@@ -158,7 +158,7 @@
         "kind": 6,
         "importPath": "backend.api.migrations.0001_initial",
         "description": "backend.api.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Task',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('title', models.CharField(max_length=120, verbose_name='Заголовок')),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = []\n    operations = [\n        migrations.CreateModel(\n            name=\"Task\",\n            fields=[\n                (\n                    \"id\",\n                    models.BigAutoField(",
         "detail": "backend.api.migrations.0001_initial",
         "documentation": {}
     },
@@ -167,7 +167,7 @@
         "kind": 6,
         "importPath": "backend.api.admin",
         "description": "backend.api.admin",
-        "peekOfCode": "class TaskAdmin(admin.ModelAdmin):\n    list_display = ('title', 'description', 'completed')\nadmin.site.register(Task, TaskAdmin)",
+        "peekOfCode": "class TaskAdmin(admin.ModelAdmin):\n    list_display = (\"title\", \"description\", \"completed\")\nadmin.site.register(Task, TaskAdmin)",
         "detail": "backend.api.admin",
         "documentation": {}
     },
@@ -176,7 +176,7 @@
         "kind": 6,
         "importPath": "backend.api.apps",
         "description": "backend.api.apps",
-        "peekOfCode": "class ApiConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'api'",
+        "peekOfCode": "class ApiConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"api\"",
         "detail": "backend.api.apps",
         "documentation": {}
     },
@@ -185,7 +185,7 @@
         "kind": 6,
         "importPath": "backend.api.models",
         "description": "backend.api.models",
-        "peekOfCode": "class Task(models.Model):\n    title = models.CharField(verbose_name='Заголовок', max_length=120)\n    description = models.TextField()\n    completed = models.BooleanField(default=False)\n    def _str_(self):\n        return self.title",
+        "peekOfCode": "class Task(models.Model):\n    title = models.CharField(verbose_name=\"Заголовок\", max_length=120)\n    description = models.TextField()\n    completed = models.BooleanField(default=False)\n    def _str_(self):\n        return self.title",
         "detail": "backend.api.models",
         "documentation": {}
     },
@@ -194,7 +194,7 @@
         "kind": 6,
         "importPath": "backend.api.serializers",
         "description": "backend.api.serializers",
-        "peekOfCode": "class TaskSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Task\n        fields = ('id', 'title', 'description', 'completed')",
+        "peekOfCode": "class TaskSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Task\n        fields = (\"id\", \"title\", \"description\", \"completed\")",
         "detail": "backend.api.serializers",
         "documentation": {}
     },
@@ -221,7 +221,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nSECRET_KEY = 'django-insecure-j_89af+30&&4qm*8z9_(^zz8p4-ho8z_m6ylm0s$h!-p@on1_^'\nDEBUG = False\nALLOWED_HOSTS = ['semo.hopto.org', '127.0.0.1', 'localhost']\n# Application definition\nINSTALLED_APPS = [\n    'api.apps.ApiConfig',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nSECRET_KEY = \"django-insecure-j_89af+30&&4qm*8z9_(^zz8p4-ho8z_m6ylm0s$h!-p@on1_^\"\nDEBUG = False\nALLOWED_HOSTS = [\"semo.hopto.org\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"api.apps.ApiConfig\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -230,7 +230,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-j_89af+30&&4qm*8z9_(^zz8p4-ho8z_m6ylm0s$h!-p@on1_^'\nDEBUG = False\nALLOWED_HOSTS = ['semo.hopto.org', '127.0.0.1', 'localhost']\n# Application definition\nINSTALLED_APPS = [\n    'api.apps.ApiConfig',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "SECRET_KEY = \"django-insecure-j_89af+30&&4qm*8z9_(^zz8p4-ho8z_m6ylm0s$h!-p@on1_^\"\nDEBUG = False\nALLOWED_HOSTS = [\"semo.hopto.org\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"api.apps.ApiConfig\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -239,7 +239,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = ['semo.hopto.org', '127.0.0.1', 'localhost']\n# Application definition\nINSTALLED_APPS = [\n    'api.apps.ApiConfig',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
+        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = [\"semo.hopto.org\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"api.apps.ApiConfig\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -248,7 +248,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "ALLOWED_HOSTS = ['semo.hopto.org', '127.0.0.1', 'localhost']\n# Application definition\nINSTALLED_APPS = [\n    'api.apps.ApiConfig',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "ALLOWED_HOSTS = [\"semo.hopto.org\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"api.apps.ApiConfig\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -257,7 +257,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'api.apps.ApiConfig',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'corsheaders',\n    'rest_framework',",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"api.apps.ApiConfig\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"corsheaders\",\n    \"rest_framework\",",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -266,7 +266,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    'corsheaders.middleware.CorsMiddleware',\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]",
+        "peekOfCode": "MIDDLEWARE = [\n    \"corsheaders.middleware.CorsMiddleware\",\n    \"django.middleware.security.SecurityMiddleware\",\n    \"django.contrib.sessions.middleware.SessionMiddleware\",\n    \"django.middleware.common.CommonMiddleware\",\n    \"django.middleware.csrf.CsrfViewMiddleware\",\n    \"django.contrib.auth.middleware.AuthenticationMiddleware\",\n    \"django.contrib.messages.middleware.MessageMiddleware\",\n    \"django.middleware.clickjacking.XFrameOptionsMiddleware\",\n]",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -275,7 +275,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "ROOT_URLCONF = 'backend.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "peekOfCode": "ROOT_URLCONF = \"backend.urls\"\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -284,7 +284,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "peekOfCode": "TEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",\n                \"django.contrib.auth.context_processors.auth\",",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -293,7 +293,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'backend.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation",
+        "peekOfCode": "WSGI_APPLICATION = \"backend.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\n# Password validation",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -302,7 +302,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -311,7 +311,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.UserAttributeSimilarityValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.MinimumLengthValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.CommonPasswordValidator\",\n    },",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -320,7 +320,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# При планировании архитектуры было решено,\n# что статические файлы Django должны быть доступны по адресу /static/\nSTATIC_URL = '/static/'",
+        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# При планировании архитектуры было решено,\n# что статические файлы Django должны быть доступны по адресу /static/\nSTATIC_URL = \"/static/\"",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -329,7 +329,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# При планировании архитектуры было решено,\n# что статические файлы Django должны быть доступны по адресу /static/\nSTATIC_URL = '/static/'\n# Указываем корневую директорию для сборки статических файлов;",
+        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# При планировании архитектуры было решено,\n# что статические файлы Django должны быть доступны по адресу /static/\nSTATIC_URL = \"/static/\"\n# Указываем корневую директорию для сборки статических файлов;",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -338,7 +338,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# При планировании архитектуры было решено,\n# что статические файлы Django должны быть доступны по адресу /static/\nSTATIC_URL = '/static/'\n# Указываем корневую директорию для сборки статических файлов;\n# в контейнере это будет /app/collected_static",
+        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# При планировании архитектуры было решено,\n# что статические файлы Django должны быть доступны по адресу /static/\nSTATIC_URL = \"/static/\"\n# Указываем корневую директорию для сборки статических файлов;\n# в контейнере это будет /app/collected_static",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -347,7 +347,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# При планировании архитектуры было решено,\n# что статические файлы Django должны быть доступны по адресу /static/\nSTATIC_URL = '/static/'\n# Указываем корневую директорию для сборки статических файлов;\n# в контейнере это будет /app/collected_static\nSTATIC_ROOT = '/backend_static/static'",
+        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# При планировании архитектуры было решено,\n# что статические файлы Django должны быть доступны по адресу /static/\nSTATIC_URL = \"/static/\"\n# Указываем корневую директорию для сборки статических файлов;\n# в контейнере это будет /app/collected_static\nSTATIC_ROOT = \"/backend_static/static\"",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -356,7 +356,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# При планировании архитектуры было решено,\n# что статические файлы Django должны быть доступны по адресу /static/\nSTATIC_URL = '/static/'\n# Указываем корневую директорию для сборки статических файлов;\n# в контейнере это будет /app/collected_static\nSTATIC_ROOT = '/backend_static/static'\n# Теперь при вызове команды python manage.py collectstatic",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# При планировании архитектуры было решено,\n# что статические файлы Django должны быть доступны по адресу /static/\nSTATIC_URL = \"/static/\"\n# Указываем корневую директорию для сборки статических файлов;\n# в контейнере это будет /app/collected_static\nSTATIC_ROOT = \"/backend_static/static\"\n# Теперь при вызове команды python manage.py collectstatic",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -365,7 +365,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "STATIC_URL = '/static/'\n# Указываем корневую директорию для сборки статических файлов;\n# в контейнере это будет /app/collected_static\nSTATIC_ROOT = '/backend_static/static'\n# Теперь при вызове команды python manage.py collectstatic\n# Django будет копировать все статические файлы в директорию collected_static\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCSRF_TRUSTED_ORIGINS = [",
+        "peekOfCode": "STATIC_URL = \"/static/\"\n# Указываем корневую директорию для сборки статических файлов;\n# в контейнере это будет /app/collected_static\nSTATIC_ROOT = \"/backend_static/static\"\n# Теперь при вызове команды python manage.py collectstatic\n# Django будет копировать все статические файлы в директорию collected_static\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nCSRF_TRUSTED_ORIGINS = [",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -374,7 +374,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "STATIC_ROOT = '/backend_static/static'\n# Теперь при вызове команды python manage.py collectstatic\n# Django будет копировать все статические файлы в директорию collected_static\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCSRF_TRUSTED_ORIGINS = [\n    'http://localhost:8000',\n    'http://127.0.0.1:8000',\n    'http://semo.hopto.org',  # Добавьте ваш домен, если нужно",
+        "peekOfCode": "STATIC_ROOT = \"/backend_static/static\"\n# Теперь при вызове команды python manage.py collectstatic\n# Django будет копировать все статические файлы в директорию collected_static\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nCSRF_TRUSTED_ORIGINS = [\n    \"http://localhost:8000\",\n    \"http://127.0.0.1:8000\",\n    \"http://semo.hopto.org\",  # Добавьте ваш домен, если нужно",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -383,7 +383,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCSRF_TRUSTED_ORIGINS = [\n    'http://localhost:8000',\n    'http://127.0.0.1:8000',\n    'http://semo.hopto.org',  # Добавьте ваш домен, если нужно\n]\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:8000',\n    'http://127.0.0.1:8000',\n    'http://semo.hopto.org',  # Добавьте ваш домен, если нужно",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nCSRF_TRUSTED_ORIGINS = [\n    \"http://localhost:8000\",\n    \"http://127.0.0.1:8000\",\n    \"http://semo.hopto.org\",  # Добавьте ваш домен, если нужно\n]\nCORS_ALLOWED_ORIGINS = [\n    \"http://localhost:8000\",\n    \"http://127.0.0.1:8000\",\n    \"http://semo.hopto.org\",  # Добавьте ваш домен, если нужно",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -392,7 +392,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "CSRF_TRUSTED_ORIGINS = [\n    'http://localhost:8000',\n    'http://127.0.0.1:8000',\n    'http://semo.hopto.org',  # Добавьте ваш домен, если нужно\n]\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:8000',\n    'http://127.0.0.1:8000',\n    'http://semo.hopto.org',  # Добавьте ваш домен, если нужно\n]",
+        "peekOfCode": "CSRF_TRUSTED_ORIGINS = [\n    \"http://localhost:8000\",\n    \"http://127.0.0.1:8000\",\n    \"http://semo.hopto.org\",  # Добавьте ваш домен, если нужно\n]\nCORS_ALLOWED_ORIGINS = [\n    \"http://localhost:8000\",\n    \"http://127.0.0.1:8000\",\n    \"http://semo.hopto.org\",  # Добавьте ваш домен, если нужно\n]",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -401,7 +401,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "CORS_ALLOWED_ORIGINS = [\n    'http://localhost:8000',\n    'http://127.0.0.1:8000',\n    'http://semo.hopto.org',  # Добавьте ваш домен, если нужно\n]",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = [\n    \"http://localhost:8000\",\n    \"http://127.0.0.1:8000\",\n    \"http://semo.hopto.org\",  # Добавьте ваш домен, если нужно\n]",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -410,7 +410,7 @@
         "kind": 5,
         "importPath": "backend.backend.urls",
         "description": "backend.backend.urls",
-        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register('tasks', views.TaskView, 'task')\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('api/', include(router.urls)),\n]",
+        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register(\"tasks\", views.TaskView, \"task\")\nurlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"api/\", include(router.urls)),\n]",
         "detail": "backend.backend.urls",
         "documentation": {}
     },
@@ -419,7 +419,7 @@
         "kind": 5,
         "importPath": "backend.backend.urls",
         "description": "backend.backend.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('api/', include(router.urls)),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"api/\", include(router.urls)),\n]",
         "detail": "backend.backend.urls",
         "documentation": {}
     },
@@ -437,7 +437,7 @@
         "kind": 2,
         "importPath": "backend.manage",
         "description": "backend.manage",
-        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault(\"DJANGO_SETTINGS_MODULE\", \"backend.settings\")\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
         "detail": "backend.manage",
         "documentation": {}
     }
