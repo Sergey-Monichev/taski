@@ -221,7 +221,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nSECRET_KEY = 'django-insecure-j_89af+30&&4qm*8z9_(^zz8p4-ho8z_m6ylm0s$h!-p@on1_^'\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'api.apps.ApiConfig',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nSECRET_KEY = 'django-insecure-j_89af+30&&4qm*8z9_(^zz8p4-ho8z_m6ylm0s$h!-p@on1_^'\nDEBUG = False\nALLOWED_HOSTS = ['semo.hopto.org', '127.0.0.1', 'localhost']\n# Application definition\nINSTALLED_APPS = [\n    'api.apps.ApiConfig',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -230,7 +230,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-j_89af+30&&4qm*8z9_(^zz8p4-ho8z_m6ylm0s$h!-p@on1_^'\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'api.apps.ApiConfig',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-j_89af+30&&4qm*8z9_(^zz8p4-ho8z_m6ylm0s$h!-p@on1_^'\nDEBUG = False\nALLOWED_HOSTS = ['semo.hopto.org', '127.0.0.1', 'localhost']\n# Application definition\nINSTALLED_APPS = [\n    'api.apps.ApiConfig',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -239,7 +239,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'api.apps.ApiConfig',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
+        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = ['semo.hopto.org', '127.0.0.1', 'localhost']\n# Application definition\nINSTALLED_APPS = [\n    'api.apps.ApiConfig',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -248,7 +248,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'api.apps.ApiConfig',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "ALLOWED_HOSTS = ['semo.hopto.org', '127.0.0.1', 'localhost']\n# Application definition\nINSTALLED_APPS = [\n    'api.apps.ApiConfig',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -320,7 +320,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# При планировании архитектуры было решено,\n# что статические файлы Django должны быть доступны по адресу /static/\nSTATIC_URL = '/static/'",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -329,7 +329,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# При планировании архитектуры было решено,\n# что статические файлы Django должны быть доступны по адресу /static/\nSTATIC_URL = '/static/'\n# Указываем корневую директорию для сборки статических файлов;",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -338,7 +338,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ORIGIN_WHITELIST = [",
+        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# При планировании архитектуры было решено,\n# что статические файлы Django должны быть доступны по адресу /static/\nSTATIC_URL = '/static/'\n# Указываем корневую директорию для сборки статических файлов;\n# в контейнере это будет /app/collected_static",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -347,7 +347,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ORIGIN_WHITELIST = [\n    'http://localhost:3000'",
+        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# При планировании архитектуры было решено,\n# что статические файлы Django должны быть доступны по адресу /static/\nSTATIC_URL = '/static/'\n# Указываем корневую директорию для сборки статических файлов;\n# в контейнере это будет /app/collected_static\nSTATIC_ROOT = '/backend_static/static'",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -356,7 +356,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ORIGIN_WHITELIST = [\n    'http://localhost:3000'\n]",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# При планировании архитектуры было решено,\n# что статические файлы Django должны быть доступны по адресу /static/\nSTATIC_URL = '/static/'\n# Указываем корневую директорию для сборки статических файлов;\n# в контейнере это будет /app/collected_static\nSTATIC_ROOT = '/backend_static/static'\n# Теперь при вызове команды python manage.py collectstatic",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -365,7 +365,16 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "STATIC_URL = '/static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ORIGIN_WHITELIST = [\n    'http://localhost:3000'\n]",
+        "peekOfCode": "STATIC_URL = '/static/'\n# Указываем корневую директорию для сборки статических файлов;\n# в контейнере это будет /app/collected_static\nSTATIC_ROOT = '/backend_static/static'\n# Теперь при вызове команды python manage.py collectstatic\n# Django будет копировать все статические файлы в директорию collected_static\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCSRF_TRUSTED_ORIGINS = [",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "STATIC_ROOT = '/backend_static/static'\n# Теперь при вызове команды python manage.py collectstatic\n# Django будет копировать все статические файлы в директорию collected_static\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCSRF_TRUSTED_ORIGINS = [\n    'http://localhost:8000',\n    'http://127.0.0.1:8000',\n    'http://semo.hopto.org',  # Добавьте ваш домен, если нужно",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -374,16 +383,25 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ORIGIN_WHITELIST = [\n    'http://localhost:3000'\n]",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCSRF_TRUSTED_ORIGINS = [\n    'http://localhost:8000',\n    'http://127.0.0.1:8000',\n    'http://semo.hopto.org',  # Добавьте ваш домен, если нужно\n]\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:8000',\n    'http://127.0.0.1:8000',\n    'http://semo.hopto.org',  # Добавьте ваш домен, если нужно",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
     {
-        "label": "CORS_ORIGIN_WHITELIST",
+        "label": "CSRF_TRUSTED_ORIGINS",
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "CORS_ORIGIN_WHITELIST = [\n    'http://localhost:3000'\n]",
+        "peekOfCode": "CSRF_TRUSTED_ORIGINS = [\n    'http://localhost:8000',\n    'http://127.0.0.1:8000',\n    'http://semo.hopto.org',  # Добавьте ваш домен, если нужно\n]\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:8000',\n    'http://127.0.0.1:8000',\n    'http://semo.hopto.org',  # Добавьте ваш домен, если нужно\n]",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOWED_ORIGINS",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = [\n    'http://localhost:8000',\n    'http://127.0.0.1:8000',\n    'http://semo.hopto.org',  # Добавьте ваш домен, если нужно\n]",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
